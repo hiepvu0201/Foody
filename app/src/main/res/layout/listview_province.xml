@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <Button
+            android:id="@+id/btnHuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hủy"
+            android:textColor="#121111"
+            android:textColorHighlight="#00BCD4"
+            android:textColorHint="#0B0A0A"
+            android:textColorLink="#00BCD4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="Chọn tỉnh thành"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xong" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/inputSearch"
+            android:layout_weight="1"
+            android:drawableLeft="@android:drawable/ic_search_category_default"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tìm tỉnh thành"
+            android:inputType="textVisiblePassword"
+            android:textSize="16sp">
+        </EditText>
+    </LinearLayout>
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_view">
+
+    </ListView>
+</LinearLayout>

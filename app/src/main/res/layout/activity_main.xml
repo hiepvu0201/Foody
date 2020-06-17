@@ -5,48 +5,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:background="#ed1c24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
+            android:paddingTop="5dp"
+            android:textColor="#fff"
             android:paddingLeft="20dp"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:text="Tìm kiếm"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
         <LinearLayout
+            android:background="@drawable/round_edittext"
+            android:padding="5dp"
+            android:layout_margin="5dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:weightSum="1">
 
             <EditText
+                android:background="@drawable/round_edittext"
                 android:layout_weight="1"
                 android:drawableLeft="@android:drawable/ic_search_category_default"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:hint="Tìm địa điểm, món ăn, địa chỉ..."
                 android:textSize="16sp">
             </EditText>
 
-            <TextView
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/btn_Province"
+                android:paddingRight="10dp"
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:text="Đồng Nai"
                 android:textSize="16sp">
-            </TextView>
+            </Button>
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
+        android:layout_margin="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

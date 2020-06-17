@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import hcmute.edu.vn.group11.foody.entities.Restaurant;
+
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
     private Context mContext;
