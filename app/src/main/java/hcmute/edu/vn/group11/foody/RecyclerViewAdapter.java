@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import hcmute.edu.vn.group11.foody.entities.Restaurant;
@@ -39,7 +41,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
 
         holder.tv_res_name.setText(mData.get(position).getName());
-        holder.img_res_thumbnail.setImageResource(mData.get(position).getThumbnail());
+        Picasso.with(this.mContext).load(mData.get(position).getImage())
+                .into(holder.img_res_thumbnail,new com.squareup.picasso.Callback(){
+                    @Override
+                    public void onSuccess() {
+                    }
+                    @Override
+                    public void onError() {
+                    }
+                });
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +58,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 // Passing data to the book category
                 intent.putExtra("Restaurant Name", mData.get(position).getName());
                 intent.putExtra("Description", mData.get(position).getDescription());
-                intent.putExtra("Thumbnail", mData.get(position).getThumbnail());
+                intent.putExtra("Thumbnail", mData.get(position).getImage());
 
                 //Start the activity
                 mContext.startActivity(intent);
