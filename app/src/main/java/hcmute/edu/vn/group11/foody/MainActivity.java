@@ -57,22 +57,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void insertValues(){
-//        database.queryData("INSERT INTO Food VALUES (null,'Bún mắm','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg',1)");
-//        database.queryData("INSERT INTO Food VALUES (null,'Bún đậu mắm tôm')");
-//        database.queryData("INSERT INTO Food VALUES (null,'Bún bò hế')");
-//        database.queryData("INSERT INTO Food VALUES (null,'Mì tương đen')");
-//        database.queryData("INSERT INTO Food VALUES (null,'Mì hải sản')");
-//        database.queryData("INSERT INTO Food VALUES (null,'Mì cay')");
-//        database.queryData("INSERT INTO Food VALUES (null,'Cơm tấm')");
-//        database.queryData("INSERT INTO Food VALUES (null,'Bánh canh')");
-//        database.queryData("INSERT INTO Food VALUES (null,'Bún riêu')");
-//        database.queryData("INSERT INTO Food VALUES (null,'Bún chả')");
-//        database.queryData("INSERT INTO Food VALUES (null,'Bánh bột lọc')");
-//        database.queryData("INSERT INTO Food VALUES (null,'Bánh bèo')");
-//
-//        database.queryData("INSERT INTO Category VALUES (null,'Cửa hàng bán chạy')");
-//        database.queryData("INSERT INTO Category VALUES (null,'Cửa hàng mới)");
-//        database.queryData("INSERT INTO Category VALUES (null,'Cửa hàng có nhiều khuyến mãi')");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún mắm','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún đậu mắm tôm','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún bò hế', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì tương đen','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì hải sản','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì cay','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Cơm tấm','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh canh', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún riêu','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún chả', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bột lọc', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bèo', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',1)");
 
         database.queryData("INSERT INTO Restaurant VALUES (null,'Bà năm','Ngon bổ rẻ','0123123123','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2018/07/mon-an-binh-dan.jpg'," +
                 "'TP HCM','1 Võ Văn Ngân Thủ Đức TP HCM')");

@@ -20,7 +20,6 @@ public class Province extends AppCompatActivity {
 
     ArrayAdapter<String>adapter;
 
-    Button btnCancel, btnDone;
     EditText inputSearch;
 
     ArrayList<HashMap<String,String>>productList;
@@ -37,7 +36,6 @@ public class Province extends AppCompatActivity {
 
         lv = (ListView) findViewById(R.id.list_view);
         inputSearch = (EditText) findViewById(R.id.inputSearch);
-        btnCancel = (Button) findViewById(R.id.btnHuy);
 
         adapter = new ArrayAdapter<String>(this,R.layout.listprovince,R.id.product_name,products);
         lv.setAdapter(adapter);
@@ -49,9 +47,7 @@ public class Province extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
-
                 Province.this.adapter.getFilter().filter(cs);
-
             }
 
             @Override
@@ -60,11 +56,5 @@ public class Province extends AppCompatActivity {
             }
         });
 
-        btnCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
     }
 }
