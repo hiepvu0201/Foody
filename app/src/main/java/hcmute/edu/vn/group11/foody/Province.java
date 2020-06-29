@@ -3,7 +3,9 @@ package hcmute.edu.vn.group11.foody;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -18,6 +20,7 @@ public class Province extends AppCompatActivity {
 
     ArrayAdapter<String>adapter;
 
+    Button btnCancel, btnDone;
     EditText inputSearch;
 
     ArrayList<HashMap<String,String>>productList;
@@ -31,8 +34,11 @@ public class Province extends AppCompatActivity {
                 "Đắk Lắk","Đắk Nông","Điện Biên","Đồng Nai","Đồng Tháp","Gia Lai","Hà Giang","Hà Nam","Hà Tĩnh","Hải Dương","Hậu Giang","Hòa Bình","Hưng Yên","Khánh Hòa",
                 "Kiên Giang","Kon Tum","Lai Châu","Lâm Đồng","Lạng Sơn","Lào Cai","Long An","Nam Định","Nghệ An","Ninh Bình","Ninh Thuận","Phú Thọ","Quảng Bình","Quảng Nam",
                 "Quảng Ngãi","Quảng Ninh","Quảng Trị","Sóc Trăng","Sơn La","Tây Ninh","Thái Bình","Thái Nguyên","Thanh Hóa","Thừa Thiên Huế","Tiền Giang","Trà Vinh","Tuyên Quang","Vĩnh Long","Vĩnh Phúc","Yên Bái","Phú Yên","Cần Thơ","Đà Nẵng","Hải Phòng","Hà Nội","TP HCM"};
+
         lv = (ListView) findViewById(R.id.list_view);
         inputSearch = (EditText) findViewById(R.id.inputSearch);
+        btnCancel = (Button) findViewById(R.id.btnHuy);
+
         adapter = new ArrayAdapter<String>(this,R.layout.listprovince,R.id.product_name,products);
         lv.setAdapter(adapter);
         inputSearch.addTextChangedListener(new TextWatcher() {
@@ -50,6 +56,13 @@ public class Province extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+                inputSearch.setText("");
+            }
+        });
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
             }
         });

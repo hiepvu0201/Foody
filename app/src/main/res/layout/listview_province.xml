@@ -7,18 +7,38 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:background="#ed1c24">
 
-        >
+        <ImageButton
+            android:id="@+id/imgbtnBack"
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:paddingTop="5dp"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:text="Tìm kiếm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ed1c24">
 
         <Button
             android:id="@+id/btnHuy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#ed1c24"
             android:text="Hủy"
-            android:textColor="#121111"
-            android:textColorHighlight="#00BCD4"
-            android:textColorHint="#0B0A0A"
-            android:textColorLink="#00BCD4" />
+            android:textColor="#FFFFFF" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -26,13 +46,16 @@
             android:gravity="center"
             android:layout_weight="1"
             android:text="Chọn tỉnh thành"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"/>
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Xong" />
+            android:text="Xong"
+            android:background="#ed1c24"
+            android:textColor="#FFFFFF"/>
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -41,14 +64,14 @@
 
         <EditText
             android:id="@+id/inputSearch"
-            android:layout_weight="1"
-            android:drawableLeft="@android:drawable/ic_search_category_default"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#E6E5E5"
+            android:drawableLeft="@android:drawable/ic_search_category_default"
             android:hint="Tìm tỉnh thành"
             android:inputType="textVisiblePassword"
-            android:textSize="16sp">
-        </EditText>
+            android:textSize="16sp"></EditText>
     </LinearLayout>
     <ListView
         android:layout_width="fill_parent"
