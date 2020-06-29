@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        province=btnProvince.getText().toString();
+
         lstRes = new ArrayList<>();
         getRestaurants();
         RecyclerView myrv = (RecyclerView) findViewById(R.id.recyclerview_id);
