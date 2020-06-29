@@ -41,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        province=btnProvince.getText().toString();
+        Intent intent = getIntent();
+        province=intent.getStringExtra("province");
+        btnProvince.setText(province);
 
         lstRes = new ArrayList<>();
         getRestaurants();
