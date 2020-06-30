@@ -41,16 +41,17 @@ public class MenuActivity extends AppCompatActivity {
        listdataHeader = new ArrayList<>();
        listdataChild = new HashMap<String, List<String>>();
 
-
-
        listdataHeader.add("Đặc sản");
        listdataHeader.add("Món mới");
 
        List<String> dacSan = new ArrayList<String>();
+       List<String> monMoi = new ArrayList<String>();
+
        Intent intent = getIntent();
        dacSan.add(Objects.requireNonNull(intent.getExtras()).getString("Name")+" - "+intent.getExtras().getString("Gia"));
 
-       listdataChild.put(listdataHeader.get(0), dacSan);
-
+       for(int i=0; i<dacSan.size();i++){
+           listdataChild.put(listdataHeader.get(i), dacSan);
+       }
    }
 }
