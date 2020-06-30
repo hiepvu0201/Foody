@@ -10,29 +10,12 @@ public class Food {
     public Food() {
     }
 
-    public Food(int id, String name, String image, String gia, int idQuan ) {
+    public Food(int id, String name, String image, String gia, int idQuan) {
         this.id = id;
         this.name = name;
         this.image = image;
         Gia = gia;
         this.idQuan = idQuan;
-
-    }
-
-    public int getIdQuan() {
-        return idQuan;
-    }
-
-    public void setIdQuan(int idQuan) {
-        this.idQuan = idQuan;
-    }
-
-    public String getGia() {
-        return Gia;
-    }
-
-    public void setGia(String gia) {
-        Gia = gia;
     }
 
     public int getId() {
@@ -57,5 +40,21 @@ public class Food {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getGia() {
+        return Gia;
+    }
+
+    public void setGia(String gia) {
+        Gia = gia;
+    }
+
+    public int getIdQuan() {
+        return idQuan;
+    }
+
+    public void setIdQuan(int idQuan) {
+        this.idQuan = idQuan;
     }
 }

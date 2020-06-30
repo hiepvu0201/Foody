@@ -1,4 +1,4 @@
-package hcmute.edu.vn.group11.foody;
+package hcmute.edu.vn.group11.foody.activities;
 
 import android.os.Bundle;
 import android.widget.ExpandableListView;
@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import hcmute.edu.vn.group11.foody.CustomExpandableListView;
+import hcmute.edu.vn.group11.foody.R;
 
 public class MenuActivity extends AppCompatActivity {
 

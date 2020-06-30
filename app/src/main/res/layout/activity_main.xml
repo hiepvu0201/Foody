@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <LinearLayout
         android:background="#ed1c24"
@@ -61,7 +61,7 @@
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview_id"
+            android:id="@+id/recyclerview_res_id"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 

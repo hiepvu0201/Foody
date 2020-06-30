@@ -7,7 +7,7 @@
     android:weightSum="5"
     android:orientation="vertical"
     android:background="#DDD7D7"
-    tools:context=".ActivityRestaurant">
+    tools:context=".activities.RestaurantActivity">
 
     <LinearLayout
         android:background="#ed1c24"
@@ -89,12 +89,14 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
                     <TextView
+                        android:textSize="15sp"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:textStyle="bold"
                         android:text="GIỜ MỞ CỬA">
                     </TextView>
                     <TextView
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -103,6 +105,7 @@
                 </LinearLayout>
 
                 <Button
+                    android:textSize="15sp"
                     android:id="@+id/tvPhone"
                     android:layout_margin="5dp"
                     android:layout_width="140dp"
@@ -121,6 +124,8 @@
                 android:background="#FAFAFA">
 
                 <TextView
+                    android:textSize="15sp"
+                    android:textStyle="bold"
                     android:id="@+id/tvAddress"
                     android:drawablePadding="10dp"
                     android:drawableLeft="@drawable/marker"
@@ -129,11 +134,12 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="13dp"
                     android:layout_marginLeft="13dp"
                     android:layout_marginTop="17dp"
                     android:text="Địa chỉ" />
                 <TextView
+                    android:textSize="15sp"
+                    android:textStyle="bold"
                     android:id="@+id/tvDistance"
                     android:drawablePadding="10dp"
                     android:drawableLeft="@drawable/point"
@@ -141,13 +147,14 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="10dp"
                     android:layout_marginTop="50dp"
                     android:text="Khoảng cách "
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="13dp"
                     android:layout_alignParentLeft="true" />
                 <TextView
                     android:id="@+id/tvType"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
                     android:drawablePadding="10dp"
                     android:drawableLeft="@drawable/restaurantkind"
                     android:layout_width="wrap_content"
@@ -155,21 +162,21 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="9dp"
-                    android:layout_marginLeft="9dp"
+                    android:layout_marginLeft="13dp"
                     android:layout_marginTop="82dp"
                     android:text="Thể loại" />
                 <TextView
                     android:id="@+id/tvPrice"
+                    android:textSize="15sp"
                     android:drawablePadding="10dp"
+                    android:textStyle="bold"
                     android:drawableLeft="@drawable/coin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
+                    android:layout_marginLeft="13dp"
                     android:layout_marginTop="122dp"
                     android:text="Giá cả" />
 
@@ -184,10 +191,11 @@
                     android:src="@drawable/map" />
             </RelativeLayout>
             <RelativeLayout
+                android:padding="5dp"
                 android:layout_marginTop="1dp"
                 android:layout_width="420dp"
                 android:layout_height="30dp"
-                android:background="#FAFAFA">
+                android:background="#ffff">
 
                 <ImageView
                     android:id="@+id/imgtick"
@@ -214,7 +222,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="1dp"
-                android:background="#FFFFFF">
+                android:background="#FAFAFA">
 
                 <TextView
                     android:id="@+id/tvMenu"
@@ -233,7 +241,7 @@
                 android:layout_width="410dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="2dp"
-                android:background="#FAFAFA">
+                android:background="#ffff">
 
                 <ImageView
                     android:id="@+id/imgwifi1"
@@ -244,13 +252,14 @@
                     android:layout_marginRight="4dp"
                     android:src="@drawable/wifi" />
 
-                <Button
+                <TextView
+                    android:paddingLeft="10dp"
                     android:layout_marginTop="11dp"
                     android:id="@+id/tvAddWifi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:background="#FAFAFA"
+                    android:background="#ffff"
                     android:text="Thêm wifi"
                     android:textSize="18dp" />
                 <TextView
@@ -259,7 +268,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:background="#FAFAFA"
+                    android:background="#ffff"
                     android:text="Nhập mật khẩu"
                     android:textSize="18sp" />
 

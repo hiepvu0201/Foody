@@ -1,10 +1,12 @@
-package hcmute.edu.vn.group11.foody;
+package hcmute.edu.vn.group11.foody.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Wifi extends AppCompatActivity {
+import hcmute.edu.vn.group11.foody.R;
+
+public class WifiActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

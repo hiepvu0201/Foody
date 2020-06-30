@@ -1,8 +1,10 @@
-package hcmute.edu.vn.group11.foody;
+package hcmute.edu.vn.group11.foody.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import hcmute.edu.vn.group11.foody.R;
 
 public class SearchResultActivity extends AppCompatActivity {
 

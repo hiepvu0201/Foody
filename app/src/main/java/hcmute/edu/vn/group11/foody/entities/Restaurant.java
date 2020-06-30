@@ -1,18 +1,18 @@
 package hcmute.edu.vn.group11.foody.entities;
 
 public class Restaurant {
-    int id;
-    String name;
-    String description;
-    String phone;
-    String wifi;
-    String wifipass;
-    String type;
-    String maxprice;
-    String minprice;
-    String image;
-    String province;
-    String address;
+    private int id;
+    private String name;
+    private String description;
+    private String phone;
+    private String wifi;
+    private String wifipass;
+    private String type;
+    private String maxprice;
+    private String minprice;
+    private String image;
+    private String province;
+    private String address;
 
     public Restaurant() {
     }
@@ -30,6 +30,30 @@ public class Restaurant {
         this.image = image;
         this.province = province;
         this.address = address;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getPhone() {
@@ -94,30 +118,6 @@ public class Restaurant {
 
     public void setProvince(String province) {
         this.province = province;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getAddress() {

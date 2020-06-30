@@ -1,4 +1,4 @@
-package hcmute.edu.vn.group11.foody;
+package hcmute.edu.vn.group11.foody.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,33 +16,34 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import hcmute.edu.vn.group11.foody.entities.Restaurant;
+import hcmute.edu.vn.group11.foody.activities.RestaurantActivity;
+import hcmute.edu.vn.group11.foody.R;
+import hcmute.edu.vn.group11.foody.entities.Food;
 
-public class RestaurantRecyclerViewAdapter extends RecyclerView.Adapter<RestaurantRecyclerViewAdapter.MyViewHolder> {
+public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodRecyclerViewAdapter.MyViewHolder> {
 
     private Context mContext;
-    private List<Restaurant> mData;
+    private List<Food> mData;
 
-    public RestaurantRecyclerViewAdapter(Context mContext, List<Restaurant> mData) {
+    public FoodRecyclerViewAdapter(Context mContext, List<Food> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public FoodRecyclerViewAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
         LayoutInflater mInflater = LayoutInflater.from(mContext);
         view = mInflater.inflate(R.layout.cardview_item, parent,false);
-        return new MyViewHolder(view);
+        return new FoodRecyclerViewAdapter.MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
-
-        holder.tv_res_name.setText(mData.get(position).getName());
+        holder.tv_name.setText(mData.get(position).getName());
         Picasso.with(this.mContext).load(mData.get(position).getImage())
-                .into(holder.img_res_thumbnail,new com.squareup.picasso.Callback(){
+                .into(holder.img_thumbnail,new com.squareup.picasso.Callback(){
                     @Override
                     public void onSuccess() {
                     }
@@ -53,20 +54,12 @@ public class RestaurantRecyclerViewAdapter extends RecyclerView.Adapter<Restaura
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, ActivityRestaurant.class);
+                Intent intent = new Intent(mContext, RestaurantActivity.class);
 
-                // Passing data to the resactivity
-                intent.putExtra("id", mData.get(position).getId());
                 intent.putExtra("Name", mData.get(position).getName());
-                intent.putExtra("phone", mData.get(position).getPhone());
-                intent.putExtra("wifi", mData.get(position).getWifi());
-                intent.putExtra("wifipass", mData.get(position).getWifipass());
-                intent.putExtra("type", mData.get(position).getType());
-                intent.putExtra("minprice", mData.get(position).getMinprice());
-                intent.putExtra("maxprice", mData.get(position).getMaxprice());
-                intent.putExtra("description", mData.get(position).getDescription());
-                intent.putExtra("province", mData.get(position).getProvince());
-                intent.putExtra("address", mData.get(position).getAddress());
+                intent.putExtra("image", mData.get(position).getImage());
+                intent.putExtra("idQuan", mData.get(position).getIdQuan());
+                intent.putExtra("Gia", mData.get(position).getGia());
 
                 //Start the activity
                 mContext.startActivity(intent);
@@ -80,15 +73,15 @@ public class RestaurantRecyclerViewAdapter extends RecyclerView.Adapter<Restaura
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView tv_res_name;
-        ImageView img_res_thumbnail;
+        TextView tv_name;
+        ImageView img_thumbnail;
         CardView cardView;
 
         public MyViewHolder(View itemView){
             super(itemView);
 
-            tv_res_name = (TextView) itemView.findViewById(R.id.res_name_id);
-            img_res_thumbnail = (ImageView) itemView.findViewById(R.id.res_img_id);
+            tv_name = (TextView) itemView.findViewById(R.id.name_id);
+            img_thumbnail = (ImageView) itemView.findViewById(R.id.img_id);
             cardView = (CardView) itemView.findViewById(R.id.cardview_id);
         }
     }
