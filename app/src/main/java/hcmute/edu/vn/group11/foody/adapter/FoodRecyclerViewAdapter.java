@@ -16,7 +16,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import hcmute.edu.vn.group11.foody.activities.RestaurantActivity;
+import hcmute.edu.vn.group11.foody.activities.MenuActivity;
 import hcmute.edu.vn.group11.foody.R;
 import hcmute.edu.vn.group11.foody.entities.Food;
 
@@ -32,11 +32,11 @@ public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodRecyclerVi
 
     @NonNull
     @Override
-    public FoodRecyclerViewAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
         LayoutInflater mInflater = LayoutInflater.from(mContext);
         view = mInflater.inflate(R.layout.cardview_item, parent,false);
-        return new FoodRecyclerViewAdapter.MyViewHolder(view);
+        return new MyViewHolder(view);
     }
 
     @Override
@@ -54,7 +54,7 @@ public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodRecyclerVi
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, RestaurantActivity.class);
+                Intent intent = new Intent(mContext, MenuActivity.class);
 
                 intent.putExtra("Name", mData.get(position).getName());
                 intent.putExtra("image", mData.get(position).getImage());

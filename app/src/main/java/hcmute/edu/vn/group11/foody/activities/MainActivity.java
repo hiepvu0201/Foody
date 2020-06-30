@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         myrv.setAdapter(myAdapter);
 
         intent.putExtra("listRes", lstRes);
-        test();
     }
 
     private void createDatabase(){
@@ -86,10 +85,6 @@ public class MainActivity extends AppCompatActivity {
                 "'TP HCM','1 Võ Văn Ngân Thủ Đức TP HCM')");
         database.queryData("INSERT INTO Restaurant VALUES (null,'Bà năm','Ngon bổ rẻ','0123123123','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2018/07/mon-an-binh-dan.jpg'," +
                 "'TP HCM','1 Võ Văn Ngân Thủ Đức TP HCM')");
-    }
-
-    private void test(){
-        Toast.makeText(this,"Image: "+lstRes.get(0).getImage().toString(),Toast.LENGTH_LONG).show();
     }
 
     private void getRestaurants(){

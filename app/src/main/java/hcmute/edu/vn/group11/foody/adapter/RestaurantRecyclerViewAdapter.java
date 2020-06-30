@@ -41,7 +41,6 @@ public class RestaurantRecyclerViewAdapter extends RecyclerView.Adapter<Restaura
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
-
         holder.tv_name.setText(mData.get(position).getName());
         Picasso.with(this.mContext).load(mData.get(position).getImage())
                 .into(holder.img_thumbnail,new com.squareup.picasso.Callback(){

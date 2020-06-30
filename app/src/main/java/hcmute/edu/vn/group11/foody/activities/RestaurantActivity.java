@@ -20,6 +20,7 @@ import java.util.Objects;
 
 import hcmute.edu.vn.group11.foody.R;
 import hcmute.edu.vn.group11.foody.adapter.FoodRecyclerViewAdapter;
+import hcmute.edu.vn.group11.foody.adapter.RestaurantRecyclerViewAdapter;
 import hcmute.edu.vn.group11.foody.databases.Database;
 import hcmute.edu.vn.group11.foody.entities.Food;
 import hcmute.edu.vn.group11.foody.entities.Restaurant;
@@ -93,9 +94,9 @@ public class RestaurantActivity extends AppCompatActivity {
         idQuan = intent.getIntExtra("id", 0);
         lstFood = new ArrayList<>();
         getFoods();
-        RecyclerView myrv = (RecyclerView) findViewById(R.id.recyclerview_id);
+        RecyclerView myrv = (RecyclerView) findViewById(R.id.recyclerview_food_id);
         FoodRecyclerViewAdapter myAdapter = new FoodRecyclerViewAdapter(this, lstFood);
-        myrv.setLayoutManager(new GridLayoutManager(this, 2));
+        myrv.setLayoutManager(new GridLayoutManager(this,2));
         myrv.setAdapter(myAdapter);
 
         test();

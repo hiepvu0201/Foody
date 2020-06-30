@@ -281,7 +281,7 @@
                 android:orientation="vertical">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerview_id"
+                    android:id="@+id/recyclerview_food_id"
                     android:layout_below="@id/rlAddWifi"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
