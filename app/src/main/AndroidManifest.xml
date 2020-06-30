@@ -16,6 +16,7 @@
         <activity android:name=".SearchResultActivity" />
         <activity android:name=".Province" />
         <activity android:name=".ActivityRestaurant" />
+        <activity android:name=".MenuActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

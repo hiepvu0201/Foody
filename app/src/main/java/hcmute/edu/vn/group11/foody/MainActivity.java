@@ -43,8 +43,11 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         province=intent.getStringExtra("province");
-        btnProvince.setText(province);
 
+        if(province==null||province==""){
+            province="TP HCM";
+        }
+        btnProvince.setText(province);
         lstRes = new ArrayList<>();
         getRestaurants();
         RecyclerView myrv = (RecyclerView) findViewById(R.id.recyclerview_id);
@@ -82,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 "'TP HCM','1 Võ Văn Ngân Thủ Đức TP HCM')");
     }
 
-    private void getRestaurants(){
+    public void getRestaurants(){
         Cursor dataQuan = database.getData("SELECT * FROM Restaurant Where province ='"+province+"';");
         lstRes.clear();
         while (dataQuan.moveToNext()){

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="5"
     android:orientation="vertical"
-    android:background="#fcfcfc"
+    android:background="#DDD7D7"
     tools:context=".ActivityRestaurant">
 
     <LinearLayout
@@ -29,33 +29,33 @@
             android:layout_width="match_parent"
             android:layout_height="50dp">
 
-                <ImageButton
-                    android:layout_marginLeft="10dp"
-                    android:background="@android:color/transparent"
-                    android:id="@+id/imageButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_back"
-                    tools:ignore="VectorDrawableCompat" />
+            <ImageButton
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_back"
+                tools:ignore="VectorDrawableCompat" />
 
-                <TextView
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:textColor="#ffff"
-                    android:id="@+id/txtResName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="Restaurant Name"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:id="@+id/txtResName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Restaurant Name"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
 
 
-                <ImageButton
-                    android:background="@android:color/transparent"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_3dot"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+            <ImageButton
+                android:background="@android:color/transparent"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_3dot"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
 
 
         </LinearLayout>
@@ -66,68 +66,218 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:padding="10dp">
+        android:layout_marginTop="75dp">
 
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imageView"
+            <RelativeLayout
+                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                app:srcCompat="@drawable/map" />
+                android:layout_height="match_parent"
+                android:background="#FAFAFA">
 
-            <TextView
-                android:id="@+id/txtFoodName"
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:textStyle="bold"
+                        android:text="GIỜ MỞ CỬA">
+                    </TextView>
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:text="10:00 - 21:00">
+                    </TextView>
+                </LinearLayout>
+
+                <Button
+                    android:layout_margin="10dp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Liên hệ"
+                    android:layout_alignParentRight="true">
+                </Button>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FAFAFA">
+
+                <TextView
+                    android:id="@+id/txtAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="17dp"
+                    android:text="Địa chỉ" />
+                <TextView
+                    android:id="@+id/txtDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="50dp"
+                    android:text="Khoảng cách "
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentLeft="true" />
+                <TextView
+                    android:id="@+id/txtType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="82dp"
+                    android:text="Thể loại" />
+                <TextView
+                    android:id="@+id/txtGia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="122dp"
+                    android:text="Giá cả" />
+
+                <ImageView
+                    android:id="@+id/res_thumbnail"
+                    android:layout_width="194dp"
+                    android:layout_height="169dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#FAFAFA"
+                    android:src="@drawable/map" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="1dp"
+                android:layout_width="420dp"
+                android:layout_height="30dp"
+                android:background="#FAFAFA">
+
+                <ImageView
+                    android:id="@+id/imgtick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:src="@drawable/tick"
+                    android:layout_marginLeft="6dp"/>
+                <ImageView
+                    android:id="@+id/imgwifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:src="@drawable/wifi"
+                    android:layout_marginLeft="60dp"/>
+                <ImageView
+                    android:id="@+id/imggiaohang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:src="@drawable/giaohang"
+                    android:layout_marginLeft="110dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="1dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#edecec"
-                android:padding="8dp"
-                android:text="Food Name" />
+                android:background="#FAFAFA">
 
-            <TextView
-                android:id="@+id/txtDecs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Description"
-                android:textSize="18sp" />
+                <Button
+                    android:id="@+id/btnMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="250dp"
+                    android:background="#FAFAFA"
+                    android:text="Thực đơn"
+                    android:textSize="16sp" />
+            </RelativeLayout>
 
-            <TextView
-                android:id="@+id/txtMenu"
+            <RelativeLayout
+                android:layout_width="410dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:background="#FAFAFA">
+
+                <ImageView
+                    android:id="@+id/imgwifi1"
+                    android:layout_width="32dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="4dp"
+                    android:src="@drawable/wifi" />
+
+                <TextView
+                    android:layout_marginTop="11dp"
+                    android:id="@+id/txtAddWifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:background="#FAFAFA"
+                    android:text="Thêm wifi"
+                    android:textSize="18dp" />
+                <TextView
+                    android:layout_marginTop="11dp"
+                    android:id="@+id/txtNhapMK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="#FAFAFA"
+                    android:text="Nhập mật khẩu"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Thực đơn"
-                android:textSize="18sp" />
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txtAddWifi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Thêm wifi"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/txtFoodName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#edecec"
+                    android:padding="8dp"
+                    android:text="Food Name" />
 
-            <ImageView
-                android:id="@+id/res_thumbnail"
-                android:layout_width="125dp"
-                android:layout_height="170dp"
-                android:layout_marginTop="10dp"
-                android:background="#2d2d2d"
-                android:scaleType="centerCrop" />
+                <TextView
+                    android:id="@+id/txtDecs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Description"
+                    android:textSize="18sp" />
 
+            </LinearLayout>
 
         </LinearLayout>
 
 
     </androidx.core.widget.NestedScrollView>
-</LinearLayout>
+</RelativeLayout>

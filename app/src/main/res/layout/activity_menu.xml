@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:text="Bún Đậu Cô Chang"
+        android:textSize="20dp"
+        android:background="#DAD4D4"
+        android:gravity="center"
+        android:textColor="#F44336"
+        android:layout_height="wrap_content"/>
+
+    <ExpandableListView
+        android:layout_below="@+id/text"
+        android:id="@+id/expandableListView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp" />
+
+</RelativeLayout>

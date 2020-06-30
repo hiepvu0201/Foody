@@ -1,6 +1,7 @@
 package hcmute.edu.vn.group11.foody;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -51,6 +53,7 @@ public class Province extends AppCompatActivity {
         inputSearch = (EditText) findViewById(R.id.inputSearch);
         adapter = new ArrayAdapter<String>(this,R.layout.listprovince,R.id.product_name,products);
         lv.setAdapter(adapter);
+
         inputSearch.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
@@ -59,9 +62,7 @@ public class Province extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
-
                 Province.this.adapter.getFilter().filter(cs);
-
             }
 
             @Override
@@ -75,7 +76,7 @@ public class Province extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String province=inputSearch.getText().toString();
+                String province = inputSearch.getText().toString();
                 Intent intent = new Intent(Province.this, MainActivity.class);
                 intent.putExtra("province", province);
                 startActivity(intent);
