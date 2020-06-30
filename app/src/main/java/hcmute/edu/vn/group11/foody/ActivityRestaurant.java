@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class ActivityRestaurant extends AppCompatActivity {
 
-    private TextView tvResName, tvFoodName, tvDesc;
+    private TextView tvResName, tvFoodName, tvDesc, tvPhone, tvType, tvPrice, tvAddress;
     private ImageView img;
     Button btnMenu;
 
@@ -29,21 +29,20 @@ public class ActivityRestaurant extends AppCompatActivity {
             }
         });
 
-        tvResName = (TextView) findViewById(R.id.txtResName);
-        tvFoodName = (TextView) findViewById(R.id.txtFoodName);
-        tvDesc = (TextView) findViewById(R.id.txtDecs);
+        tvResName = (TextView) findViewById(R.id.tvResName);
+        tvFoodName = (TextView) findViewById(R.id.tvFoodName);
+        tvDesc = (TextView) findViewById(R.id.tvDecs);
+        tvAddress = (TextView) findViewById(R.id.tvAddress);
+        tvPrice = (TextView) findViewById(R.id.tvPrice);
+        tvType  = (TextView) findViewById(R.id.tvType);
+        tvPhone = (TextView) findViewById(R.id.tvPhone);
+
         img = (ImageView) findViewById(R.id.res_thumbnail);
 
-
         // receive data
-        Intent intent = getIntent();
-        String ResName = intent.getExtras().getString("Restaurant Name");
-        String Description = intent.getExtras().getString("Description");
-        int image = intent.getExtras().getInt("Thumbnail");
+
 
         // setting value
-        tvResName.setText(ResName);
-        tvDesc.setText(Description);
-        img.setImageResource(image);
+
     }
 }

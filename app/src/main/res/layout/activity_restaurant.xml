@@ -42,7 +42,7 @@
                 android:gravity="center"
                 android:layout_weight="1"
                 android:textColor="#FFFFFF"
-                android:id="@+id/txtResName"
+                android:id="@+id/tvResName"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Restaurant Name"
@@ -103,6 +103,7 @@
                 </LinearLayout>
 
                 <Button
+                    android:id="@+id/tvPhone"
                     android:layout_margin="10dp"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
@@ -118,7 +119,7 @@
                 android:background="#FAFAFA">
 
                 <TextView
-                    android:id="@+id/txtAddress"
+                    android:id="@+id/tvAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -129,7 +130,7 @@
                     android:layout_marginTop="17dp"
                     android:text="Địa chỉ" />
                 <TextView
-                    android:id="@+id/txtDistance"
+                    android:id="@+id/tvDistance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -140,7 +141,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_alignParentLeft="true" />
                 <TextView
-                    android:id="@+id/txtType"
+                    android:id="@+id/tvType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -151,7 +152,7 @@
                     android:layout_marginTop="82dp"
                     android:text="Thể loại" />
                 <TextView
-                    android:id="@+id/txtGia"
+                    android:id="@+id/tvPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -232,7 +233,7 @@
 
                 <TextView
                     android:layout_marginTop="11dp"
-                    android:id="@+id/txtAddWifi"
+                    android:id="@+id/tvAddWifi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
@@ -241,7 +242,7 @@
                     android:textSize="18dp" />
                 <TextView
                     android:layout_marginTop="11dp"
-                    android:id="@+id/txtNhapMK"
+                    android:id="@+id/tvNhapMK"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -258,7 +259,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/txtFoodName"
+                    android:id="@+id/tvFoodName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -267,7 +268,7 @@
                     android:text="Food Name" />
 
                 <TextView
-                    android:id="@+id/txtDecs"
+                    android:id="@+id/tvDecs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
