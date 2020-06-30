@@ -231,7 +231,7 @@
                     android:layout_marginRight="4dp"
                     android:src="@drawable/wifi" />
 
-                <TextView
+                <Button
                     android:layout_marginTop="11dp"
                     android:id="@+id/tvAddWifi"
                     android:layout_width="wrap_content"

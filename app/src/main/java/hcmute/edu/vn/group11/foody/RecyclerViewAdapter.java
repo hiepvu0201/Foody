@@ -55,10 +55,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, ActivityRestaurant.class);
 
-                // Passing data to the book category
-                intent.putExtra("Restaurant Name", mData.get(position).getName());
-                intent.putExtra("Description", mData.get(position).getDescription());
-                intent.putExtra("Thumbnail", mData.get(position).getImage());
+
+
+                // Passing data to the resactivity
+                intent.putExtra("RestaurantName", mData.get(position).getName());
+                intent.putExtra("phone", mData.get(position).getPhone());
+                intent.putExtra("wifi", mData.get(position).getWifi());
+                intent.putExtra("wifipass", mData.get(position).getWifipass());
+                intent.putExtra("type", mData.get(position).getType());
+                intent.putExtra("minprice", mData.get(position).getMinprice());
+                intent.putExtra("maxprice", mData.get(position).getMaxprice());
+                intent.putExtra("description", mData.get(position).getDescription());
+                intent.putExtra("province", mData.get(position).getProvince());
+                intent.putExtra("address", mData.get(position).getAddress());
 
                 //Start the activity
                 mContext.startActivity(intent);

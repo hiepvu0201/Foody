@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<Restaurant> lstRes;
     private Button btnProvince;
-    Database database;
+    public static Database database;
     public static String province="TP HCM";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         myrv.setLayoutManager(new GridLayoutManager(this,2));
         myrv.setAdapter(myAdapter);
 
+        intent.putExtra("listRes", lstRes);
     }
 
     private void createDatabase(){
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 "'TP HCM','1 Võ Văn Ngân Thủ Đức TP HCM')");
     }
 
-    public void getRestaurants(){
+    private void getRestaurants(){
         Cursor dataQuan = database.getData("SELECT * FROM Restaurant Where province ='"+province+"';");
         lstRes.clear();
         while (dataQuan.moveToNext()){
