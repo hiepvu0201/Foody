@@ -9,10 +9,8 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import hcmute.edu.vn.group11.foody.databases.Database;
 import hcmute.edu.vn.group11.foody.entities.Restaurant;
@@ -51,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         lstRes = new ArrayList<>();
         getRestaurants();
         RecyclerView myrv = (RecyclerView) findViewById(R.id.recyclerview_id);
-        RecyclerViewAdapter myAdapter = new RecyclerViewAdapter(this, lstRes);
+        RestaurantRecyclerViewAdapter myAdapter = new RestaurantRecyclerViewAdapter(this, lstRes);
         myrv.setLayoutManager(new GridLayoutManager(this,2));
         myrv.setAdapter(myAdapter);
 

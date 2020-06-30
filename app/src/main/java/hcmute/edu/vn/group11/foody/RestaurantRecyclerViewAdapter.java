@@ -18,12 +18,12 @@ import java.util.List;
 
 import hcmute.edu.vn.group11.foody.entities.Restaurant;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
+public class RestaurantRecyclerViewAdapter extends RecyclerView.Adapter<RestaurantRecyclerViewAdapter.MyViewHolder> {
 
     private Context mContext;
     private List<Restaurant> mData;
 
-    public RecyclerViewAdapter(Context mContext, List<Restaurant> mData) {
+    public RestaurantRecyclerViewAdapter(Context mContext, List<Restaurant> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
@@ -55,10 +55,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, ActivityRestaurant.class);
 
-
-
                 // Passing data to the resactivity
-                intent.putExtra("RestaurantName", mData.get(position).getName());
+                intent.putExtra("id", mData.get(position).getId());
+                intent.putExtra("Name", mData.get(position).getName());
                 intent.putExtra("phone", mData.get(position).getPhone());
                 intent.putExtra("wifi", mData.get(position).getWifi());
                 intent.putExtra("wifipass", mData.get(position).getWifipass());

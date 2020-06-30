@@ -13,7 +13,7 @@
 
         <ImageButton
             android:id="@+id/imgbtnBack"
-            android:layout_width="15dp"
+            android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_back" />
@@ -76,7 +76,7 @@
     <ListView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/list_view">
+        android:id="@+id/lvProvince">
 
     </ListView>
 </LinearLayout>

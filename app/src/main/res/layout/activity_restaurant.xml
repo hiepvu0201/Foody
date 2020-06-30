@@ -32,7 +32,7 @@
             <ImageButton
                 android:layout_marginLeft="10dp"
                 android:background="@android:color/transparent"
-                android:id="@+id/imageButton"
+                android:id="@+id/imgbtnBack"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 app:srcCompat="@drawable/ic_back"
@@ -78,36 +78,38 @@
 
             <RelativeLayout
                 android:layout_marginTop="5dp"
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#FAFAFA">
 
                 <LinearLayout
                     android:layout_margin="10dp"
-                    android:gravity="center_vertical"
-                    android:layout_width="300dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
                     <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
                         android:textStyle="bold"
                         android:text="GIỜ MỞ CỬA">
                     </TextView>
                     <TextView
                         android:textStyle="bold"
-                        android:layout_width="100dp"
-                        android:layout_height="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
                         android:text="10:00 - 21:00">
                     </TextView>
                 </LinearLayout>
 
                 <Button
                     android:id="@+id/tvPhone"
-                    android:layout_margin="10dp"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
                     android:text="Liên hệ"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@mipmap/ic_contact"
                     android:layout_alignParentRight="true">
                 </Button>
             </RelativeLayout>
@@ -120,6 +122,8 @@
 
                 <TextView
                     android:id="@+id/tvAddress"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/marker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -131,6 +135,8 @@
                     android:text="Địa chỉ" />
                 <TextView
                     android:id="@+id/tvDistance"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/point"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -142,6 +148,8 @@
                     android:layout_alignParentLeft="true" />
                 <TextView
                     android:id="@+id/tvType"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/restaurantkind"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -153,6 +161,8 @@
                     android:text="Thể loại" />
                 <TextView
                     android:id="@+id/tvPrice"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/coin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -200,23 +210,26 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_marginTop="1dp"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FAFAFA">
+                android:layout_marginBottom="1dp"
+                android:background="#FFFFFF">
 
-                <Button
-                    android:id="@+id/btnMenu"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="250dp"
-                    android:background="#FAFAFA"
+                <TextView
+                    android:id="@+id/tvMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:drawableLeft="@drawable/menu"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
                     android:text="Thực đơn"
-                    android:textSize="16sp" />
-            </RelativeLayout>
+                    android:textSize="12sp" />
+            </LinearLayout>
 
             <RelativeLayout
+                android:id="@+id/rlAddWifi"
                 android:layout_width="410dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="2dp"
@@ -258,23 +271,13 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tvFoodName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:background="#edecec"
-                    android:padding="8dp"
-                    android:text="Food Name" />
-
-                <TextView
-                    android:id="@+id/tvDecs"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Description"
-                    android:textSize="18sp" />
-
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_id"
+                    android:layout_below="@id/rlAddWifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffff">
+                </androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>
 
         </LinearLayout>

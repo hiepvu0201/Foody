@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,14 +21,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Province extends AppCompatActivity {
-    private ListView lv;
-    ImageButton btnBack;
+    private ListView lvProvince;
 
     ArrayAdapter<String>adapter;
 
-    private EditText inputSearch;
-
-    private Button btnSave;
+    EditText inputSearch;
+    ImageButton imgbtnBack;
+    Button btnSave, btnCancel;
 
     ArrayList<HashMap<String,String>>productList;
 
@@ -36,12 +36,21 @@ public class Province extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listview_province);
 
-        btnBack = findViewById(R.id.imgbtnBack);
-        btnBack.setOnClickListener(new View.OnClickListener() {
+        imgbtnBack = findViewById(R.id.imgbtnBack);
+        btnCancel = findViewById(R.id.btnHuy);
+
+        imgbtnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Province.this, MainActivity.class);
-                startActivity(intent);
+                setResult(RESULT_CANCELED);
+                finish();
+            }
+        });
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inputSearch.setText("");
             }
         });
 
@@ -49,10 +58,19 @@ public class Province extends AppCompatActivity {
                 "Đắk Lắk","Đắk Nông","Điện Biên","Đồng Nai","Đồng Tháp","Gia Lai","Hà Giang","Hà Nam","Hà Tĩnh","Hải Dương","Hậu Giang","Hòa Bình","Hưng Yên","Khánh Hòa",
                 "Kiên Giang","Kon Tum","Lai Châu","Lâm Đồng","Lạng Sơn","Lào Cai","Long An","Nam Định","Nghệ An","Ninh Bình","Ninh Thuận","Phú Thọ","Quảng Bình","Quảng Nam",
                 "Quảng Ngãi","Quảng Ninh","Quảng Trị","Sóc Trăng","Sơn La","Tây Ninh","Thái Bình","Thái Nguyên","Thanh Hóa","Thừa Thiên Huế","Tiền Giang","Trà Vinh","Tuyên Quang","Vĩnh Long","Vĩnh Phúc","Yên Bái","Phú Yên","Cần Thơ","Đà Nẵng","Hải Phòng","Hà Nội","TP HCM"};
-        lv = (ListView) findViewById(R.id.list_view);
+
+        lvProvince = (ListView) findViewById(R.id.lvProvince);
         inputSearch = (EditText) findViewById(R.id.inputSearch);
+
         adapter = new ArrayAdapter<String>(this,R.layout.listprovince,R.id.product_name,products);
-        lv.setAdapter(adapter);
+        lvProvince.setAdapter(adapter);
+
+        lvProvince.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                inputSearch.setText(adapter.getItem(position));
+            }
+        });
 
         inputSearch.addTextChangedListener(new TextWatcher() {
             @Override

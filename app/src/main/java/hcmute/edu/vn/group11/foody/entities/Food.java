@@ -4,18 +4,19 @@ public class Food {
     private  int id;
     private String name;
     private String image;
-    private int idQuan;
     private String Gia;
+    private int idQuan;
 
     public Food() {
     }
 
-    public Food(int id, String name, String image, int idQuan, String gia) {
+    public Food(int id, String name, String image, String gia, int idQuan ) {
         this.id = id;
         this.name = name;
         this.image = image;
-        this.idQuan = idQuan;
         Gia = gia;
+        this.idQuan = idQuan;
+
     }
 
     public int getIdQuan() {
