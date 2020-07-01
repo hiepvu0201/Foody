@@ -51,6 +51,7 @@
 
 
             <ImageButton
+                android:id="@+id/icMenu"
                 android:background="@android:color/transparent"
                 android:layout_marginRight="10dp"
                 android:src="@drawable/ic_3dot"
@@ -117,79 +118,76 @@
                 </Button>
             </RelativeLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_marginTop="5dp"
+                android:weightSum="2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#FAFAFA">
 
-                <TextView
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:id="@+id/tvAddress"
-                    android:drawablePadding="10dp"
-                    android:drawableLeft="@drawable/marker"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="13dp"
-                    android:layout_marginTop="17dp"
-                    android:text="Địa chỉ" />
-                <TextView
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:id="@+id/tvDistance"
-                    android:drawablePadding="10dp"
-                    android:drawableLeft="@drawable/point"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="50dp"
-                    android:text="Khoảng cách "
-                    android:layout_marginLeft="13dp"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:id="@+id/tvType"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:drawablePadding="10dp"
-                    android:drawableLeft="@drawable/restaurantkind"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="13dp"
-                    android:layout_marginTop="82dp"
-                    android:text="Thể loại" />
-                <TextView
-                    android:id="@+id/tvPrice"
-                    android:textSize="15sp"
-                    android:drawablePadding="10dp"
-                    android:textStyle="bold"
-                    android:drawableLeft="@drawable/coin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="13dp"
-                    android:layout_marginTop="122dp"
-                    android:text="Giá cả" />
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/res_thumbnail"
-                    android:layout_width="194dp"
-                    android:layout_height="169dp"
-                    android:layout_marginLeft="200dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="#FAFAFA"
-                    android:src="@drawable/map" />
-            </RelativeLayout>
+                    <TextView
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:id="@+id/tvAddress"
+                        android:drawablePadding="10dp"
+                        android:drawableLeft="@drawable/marker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Địa chỉ" />
+                    <TextView
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:id="@+id/tvDistance"
+                        android:drawablePadding="10dp"
+                        android:drawableLeft="@drawable/point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Khoảng cách " />
+                    <TextView
+                        android:id="@+id/tvType"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:drawablePadding="10dp"
+                        android:drawableLeft="@drawable/restaurantkind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thể loại" />
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:textSize="15sp"
+                        android:drawablePadding="10dp"
+                        android:textStyle="bold"
+                        android:drawableLeft="@drawable/coin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Giá cả" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:map="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:context=".activities.MapsActivity" />
+
+                </LinearLayout>
+
+            </LinearLayout>
             <RelativeLayout
                 android:padding="5dp"
                 android:layout_marginTop="1dp"

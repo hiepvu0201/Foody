@@ -2,6 +2,7 @@ package hcmute.edu.vn.group11.foody.activities;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,6 +13,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,7 +31,7 @@ public class RestaurantActivity extends AppCompatActivity {
 
     private TextView tvResName, tvPhone, tvType, tvPrice, tvAddress;
     TextView tvMenu, tvAddWifi;
-    ImageButton btnCancel;
+    ImageButton btnCancel, btnMenu;
     ArrayList<Food> lstFood;
     public static int idQuan;
 
@@ -47,6 +49,15 @@ public class RestaurantActivity extends AppCompatActivity {
         btnCancel = (ImageButton) findViewById(R.id.imgbtnBack);
         tvMenu = (TextView) findViewById(R.id.tvMenu);
         tvAddWifi = (TextView) findViewById(R.id.tvAddWifi);
+        btnMenu = (ImageButton) findViewById(R.id.icMenu);
+
+        btnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RestaurantActivity.this, MenuActivity.class);
+                startActivity(intent);
+            }
+        });
 
         tvMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +91,14 @@ public class RestaurantActivity extends AppCompatActivity {
             }
         });
 
+        tvAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RestaurantActivity.this, MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Intent intent = getIntent();
         tvResName.setText(Objects.requireNonNull(intent.getExtras()).getString("Name"));
         tvPhone.setText(intent.getExtras().getString("phone"));
@@ -99,11 +118,6 @@ public class RestaurantActivity extends AppCompatActivity {
         myrv.setLayoutManager(new GridLayoutManager(this,2));
         myrv.setAdapter(myAdapter);
 
-        test();
-    }
-
-    private void test(){
-        Toast.makeText(this,"Image: "+lstFood.get(0).getImage().toString(),Toast.LENGTH_LONG).show();
     }
 
     private void getFoods(){
