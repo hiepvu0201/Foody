@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         myrv.setLayoutManager(new GridLayoutManager(this,2));
         myrv.setAdapter(myAdapter);
 
-        intent.putExtra("listRes", lstRes);
     }
 
     private void createDatabase(){
@@ -66,26 +65,146 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void insertValues(){
-        database.queryData("INSERT INTO Food VALUES (null,'Bún mắm','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',1)");
-        database.queryData("INSERT INTO Food VALUES (null,'Bún đậu mắm tôm','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',1)");
-        database.queryData("INSERT INTO Food VALUES (null,'Bún bò hế', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',1)");
-        database.queryData("INSERT INTO Food VALUES (null,'Mì tương đen','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',1)");
-        database.queryData("INSERT INTO Food VALUES (null,'Mì hải sản','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',3)");
-        database.queryData("INSERT INTO Food VALUES (null,'Mì cay','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',3)");
-        database.queryData("INSERT INTO Food VALUES (null,'Cơm tấm','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',2)");
-        database.queryData("INSERT INTO Food VALUES (null,'Bánh canh', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',2)");
-        database.queryData("INSERT INTO Food VALUES (null,'Bún riêu','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',2)");
-        database.queryData("INSERT INTO Food VALUES (null,'Bún chả', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',2)");
-        database.queryData("INSERT INTO Food VALUES (null,'Bánh bột lọc', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',3)");
-        database.queryData("INSERT INTO Food VALUES (null,'Bánh bèo', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',3)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún mắm','https://hocnauan.edu.vn/wp-content/uploads/2018/06/suc-hut-am-thuc-chau-a.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún đậu mắm tôm','https://hocnauan.edu.vn/wp-content/uploads/2019/01/sui-cao.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún bò hế', 'https://hocnauan.edu.vn/wp-content/uploads/2019/01/Tteokguk.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì tương đen','https://hocnauan.edu.vn/wp-content/uploads/2019/01/Yu-Sheng.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì hải sản','https://hocnauan.edu.vn/wp-content/uploads/2019/01/lap.jpg','25000vnd',3)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì cay','https://hocnauan.edu.vn/wp-content/uploads/2019/01/Khao-chae-thai-lan.jpg','25000vnd',3)");
+        database.queryData("INSERT INTO Food VALUES (null,'Cơm tấm','https://hocnauan.edu.vn/wp-content/uploads/2019/01/Sushi-Sashimi.jpg','25000vnd',2)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh canh', 'https://hocnauan.edu.vn/wp-content/uploads/2019/01/Bebek-betutu.jpg','25000vnd',2)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún riêu','https://hocnauan.edu.vn/wp-content/uploads/2019/01/Tikoy.jpg','25000vnd',2)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún chả', 'https://hocnauan.edu.vn/wp-content/uploads/2018/08/chao-ech-singapore.jpg','25000vnd',2)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bột lọc', 'https://hocnauan.edu.vn/wp-content/uploads/2018/08/so-che-thit-ech.jpg','25000vnd',3)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bèo', 'https://hocnauan.edu.vn/wp-content/uploads/2018/08/thit-ech-xao-keo-lai.jpg','25000vnd',3)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún mắm','https://hocnauan.edu.vn/wp-content/uploads/2016/02/ga-chien-kieu-an-do.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún đậu mắm tôm','https://hocnauan.edu.vn/wp-content/uploads/2018/06/ha-cao-mon-ngon-nguoi-hoa.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún bò hế', 'https://hocnauan.edu.vn/wp-content/uploads/2014/05/ga-dong-tao-xao-sa-ot.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì tương đen','https://hocnauan.edu.vn/wp-content/uploads/2016/06/goi-ngo-sen-tom-thit-1.jpg','25000vnd',1)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì hải sản','https://hocnauan.edu.vn/wp-content/uploads/2019/01/mon-ngon-dai-tiec-tat-nien-cuoi-nam.jpg','25000vnd',3)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì cay','https://hocnauan.edu.vn/wp-content/uploads/2018/09/bo-ap-chao-xot-tieu-xanh.jpg','25000vnd',3)");
+        database.queryData("INSERT INTO Food VALUES (null,'Cơm tấm','https://hocnauan.edu.vn/wp-content/uploads/2018/09/tom-hap.jpg','25000vnd',2)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh canh', 'https://hocnauan.edu.vn/wp-content/uploads/2018/09/sup-hai-san.jpg','25000vnd',2)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún riêu','https://hocnauan.edu.vn/wp-content/uploads/2018/08/ga-bo-xoi-mon-ngon-ai-cung-thich.jpg','25000vnd',4)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún chả', 'https://hocnauan.edu.vn/wp-content/uploads/2018/08/mon-ga-hap-mam-nhi.jpg','25000vnd',4)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bột lọc', 'https://hocnauan.edu.vn/wp-content/uploads/2016/12/cang-cua-bach-hoa.jpg','25000vnd',5)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bèo', 'https://hocnauan.edu.vn/wp-content/uploads/2016/09/vit-rang-muoi.jpg','25000vnd',6)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún mắm','https://hocnauan.edu.vn/wp-content/uploads/2016/06/hoa-thien-ly-xao-mam.jpg','25000vnd',7)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún đậu mắm tôm','https://hocnauan.edu.vn/wp-content/uploads/2016/06/ga-nuong-chao-do.jpg','25000vnd',8)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún bò hế', 'https://hocnauan.edu.vn/wp-content/uploads/2015/11/ca-chem-chien-xu-sot-kem-bo.jpg','25000vnd',8)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì tương đen','https://hocnauan.edu.vn/wp-content/uploads/2015/05/mon-goi-buoi.jpg','25000vnd',8)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì hải sản','https://hocnauan.edu.vn/wp-content/uploads/2015/04/cach-lam-muc-sot-cay-gion.jpg','25000vnd',9)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì cay','https://hocnauan.edu.vn/wp-content/uploads/2015/04/lau-vit-la-tia-to.jpg','25000vnd',9)");
+        database.queryData("INSERT INTO Food VALUES (null,'Cơm tấm','https://hocnauan.edu.vn/wp-content/uploads/2015/01/thit-dong-gio-thu.jpg','25000vnd',9)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh canh', 'https://hocnauan.edu.vn/wp-content/uploads/2014/10/com-ga-hoang-kim.jpg','25000vnd',10)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún riêu','https://hocnauan.edu.vn/wp-content/uploads/2014/06/vit-nuong-chao.jpg','25000vnd',10)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún chả', 'https://hocnauan.edu.vn/wp-content/uploads/2014/04/thit-xien-nuong.jpg','25000vnd',10)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bột lọc', 'https://hocnauan.edu.vn/wp-content/uploads/2014/04/goi-thit-bo-tron-rau.jpg','25000vnd',11)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bèo', 'https://hocnauan.edu.vn/wp-content/uploads/2014/04/goi-kho-qua-tom.jpg','25000vnd',12)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún mắm','https://hocnauan.edu.vn/wp-content/uploads/2014/03/muc-ong-hap-gung.jpg','25000vnd',12)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún đậu mắm tôm','https://hocnauan.edu.vn/wp-content/uploads/2014/03/ca-nuc-hap-bo-toi.jpg','25000vnd',12)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún bò hế', 'https://hocnauan.edu.vn/wp-content/uploads/2014/03/com-cuon-xuc-xich-chien.jpg','25000vnd',13)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì tương đen','https://hocnauan.edu.vn/wp-content/uploads/2014/03/com-cuon-xuc-xich-chien.jpg','25000vnd',13)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì hải sản','https://hocnauan.edu.vn/wp-content/uploads/2014/02/gan-bo-xao-ngu-vi.jpg','25000vnd',13)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì cay','https://hocnauan.edu.vn/wp-content/uploads/2013/09/ga-xe-phay-tron-le.jpg','25000vnd',13)");
+        database.queryData("INSERT INTO Food VALUES (null,'Cơm tấm','https://hocnauan.edu.vn/wp-content/uploads/2013/09/mon-nhan-boc-tom.jpg','25000vnd',14)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh canh', 'https://hocnauan.edu.vn/wp-content/uploads/2013/09/hao-sua-nuong-toi-1.jpg','25000vnd',14)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún riêu','https://hocnauan.edu.vn/wp-content/uploads/2013/09/tom-tam-dua-nao.jpg','25000vnd',14)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún chả', 'https://hocnauan.edu.vn/wp-content/uploads/2013/09/canh-ga-rim-giam-do-chua.jpg','25000vnd',14)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bột lọc', 'https://hocnauan.edu.vn/wp-content/uploads/2013/09/nom-bach-tuoc-1.jpg','25000vnd',15)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bèo', 'https://hocnauan.edu.vn/wp-content/uploads/2013/09/mon-sup-bo-vien.jpg','25000vnd',16)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún mắm','https://hocnauan.edu.vn/wp-content/uploads/2013/09/chem-chep-nuong.jpg','25000vnd',16)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún đậu mắm tôm','https://hocnauan.edu.vn/wp-content/uploads/2013/09/diem-diep-nuong-mo-hanh-1.jpg','25000vnd',16)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún bò hế', 'https://hocnauan.edu.vn/wp-content/uploads/2013/09/nam-bao-ngu-xao-me.jpg','25000vnd',16)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì tương đen','https://hocnauan.edu.vn/wp-content/uploads/2013/09/cai-xanh-cuon-tom-thit.jpg','25000vnd',17)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì hải sản','https://hocnauan.edu.vn/wp-content/uploads/2013/09/bong-bi-nhoi-thit-chien.jpg','25000vnd',17)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì cay','https://hocnauan.edu.vn/wp-content/uploads/2013/09/vit-nau-chao.jpg','25000vnd',17)");
+        database.queryData("INSERT INTO Food VALUES (null,'Cơm tấm','https://hocnauan.edu.vn/wp-content/uploads/2013/09/ca-ri-ga.jpg','25000vnd',17)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh canh', 'https://hocnauan.edu.vn/wp-content/uploads/2013/09/chim-cut-uop-chao-chien-vang.jpg','25000vnd',18)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún riêu','https://hocnauan.edu.vn/wp-content/uploads/2013/09/ga-bo-xoi-ngon.jpg','25000vnd',19)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún chả', 'https://hocnauan.edu.vn/wp-content/uploads/2013/09/nem-nuong-an-ngon.jpg','25000vnd',20)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bột lọc', 'https://hocnauan.edu.vn/wp-content/uploads/2013/09/nam-bao-ngu-xao-me.jpg','25000vnd',20)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bèo', 'https://hocnauan.edu.vn/wp-content/uploads/2013/09/cai-xanh-cuon-tom-thit.jpg','25000vnd',20)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún mắm','https://hocnauan.edu.vn/wp-content/uploads/2013/09/bong-bi-nhoi-thit-chien.jpg','25000vnd',21)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún đậu mắm tôm','https://hocnauan.edu.vn/wp-content/uploads/2018/08/gio-heo-gia-cay-ngon.jpg','25000vnd',21)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún bò hế', 'https://hocnauan.edu.vn/wp-content/uploads/2018/10/trinh-bay-mon-pho.jpg','25000vnd',21)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì tương đen','https://hocnauan.edu.vn/wp-content/uploads/2018/07/banh-cuon-thanh-tri.jpg','25000vnd',22)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì hải sản','https://hocnauan.edu.vn/wp-content/uploads/2015/12/bun-thang-ha-noi.jpg','25000vnd',23)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì cay','https://hocnauan.edu.vn/wp-content/uploads/2013/09/cach-lam-banh-khuc-ha-noi.jpg','25000vnd',24)");
+        database.queryData("INSERT INTO Food VALUES (null,'Cơm tấm','https://hocnauan.edu.vn/wp-content/uploads/2019/01/ban-banh-chung-cung-tet.jpg','25000vnd',25)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh canh', 'https://hocnauan.edu.vn/wp-content/uploads/2019/01/dua-kieu.jpg','25000vnd',25)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún riêu','https://hocnauan.edu.vn/wp-content/uploads/2019/01/mam-co-cung-giao-thua.jpg','25000vnd',25)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún chả', 'https://hocnauan.edu.vn/wp-content/uploads/2019/01/mut-gung.jpg','25000vnd',26)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bột lọc', 'https://hocnauan.edu.vn/wp-content/uploads/2019/01/mut-mang-cau-xiem.jpg','25000vnd',27)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bèo', 'https://hocnauan.edu.vn/wp-content/uploads/2019/01/lap-xuong.jpg','25000vnd',27)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún mắm','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',28)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún đậu mắm tôm','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',28)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún bò hế', 'https://hocnauan.edu.vn/wp-content/uploads/2019/01/ban-banh-chung-cung-tet.jpg','25000vnd',29)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì tương đen','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',30)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì hải sản','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',30)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì cay','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',31)");
+        database.queryData("INSERT INTO Food VALUES (null,'Cơm tấm','https://hocnauan.edu.vn/wp-content/uploads/2019/01/ban-banh-chung-cung-tet.jpg','25000vnd',32)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh canh', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',32)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún riêu','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',33)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún chả', 'https://hocnauan.edu.vn/wp-content/uploads/2014/02/gan-bo-xao-ngu-vi.jpg','25000vnd',34)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bột lọc', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',35)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bèo', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',36)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún mắm','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',37)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún đậu mắm tôm','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',37)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún bò hế', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',37)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì tương đen','https://hocnauan.edu.vn/wp-content/uploads/2014/02/gan-bo-xao-ngu-vi.jpg','25000vnd',37)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì hải sản','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',38)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì cay','https://hocnauan.edu.vn/wp-content/uploads/2013/09/nem-nuong-an-ngon.jpg','25000vnd',38)");
+        database.queryData("INSERT INTO Food VALUES (null,'Cơm tấm','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',38)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh canh', 'https://hocnauan.edu.vn/wp-content/uploads/2013/09/nem-nuong-an-ngon.jpg','25000vnd',38)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún riêu','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',39)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún chả', 'https://hocnauan.edu.vn/wp-content/uploads/2014/02/gan-bo-xao-ngu-vi.jpg','25000vnd',39)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bột lọc', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',39)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bèo', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',39)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún mắm','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',39)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún đậu mắm tôm','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',40)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún bò hế', 'https://hocnauan.edu.vn/wp-content/uploads/2014/02/gan-bo-xao-ngu-vi.jpg','25000vnd',40)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì tương đen','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',40)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì hải sản','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',40)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì cay','https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',40)");
+        database.queryData("INSERT INTO Food VALUES (null,'Cơm tấm','https://hocnauan.edu.vn/wp-content/uploads/2013/09/nem-nuong-an-ngon.jpg','25000vnd',41)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh canh', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',42)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún riêu','https://hocnauan.edu.vn/wp-content/uploads/2014/02/gan-bo-xao-ngu-vi.jpg','25000vnd',42)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún chả', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',42)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bột lọc', 'https://hocnauan.edu.vn/wp-content/uploads/2015/12/bun-thang-ha-noi.jpg','25000vnd',42)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bèo', 'https://cdn.tgdd.vn/Files/2018/06/21/1096777/cach-nau-bun-mam-thom-ngon-khong-khac-gi-ngoai-hang.jpg','25000vnd',43)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún mắm','https://hocnauan.edu.vn/wp-content/uploads/2015/12/bun-thang-ha-noi.jpg','25000vnd',44)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún đậu mắm tôm','https://dulichkhampha24.com/wp-content/uploads/2020/04/quan-an-ngon-quan-10-sai-gon-1.jpg','25000vnd',44)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún bò hế', 'https://ngonngon.net/wp-content/uploads/2019/01/20.-B%C3%A1nh-canh-gh%E1%BA%B9-69-%C3%94-Ch%E1%BB%A3-D%E1%BB%ABa-%C4%90%E1%BB%91ng-%C4%90a-30k.jpg','25000vnd',44)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì tương đen','https://mocquan.vn/wp-content/uploads/2018/09/moc-quan-banner-thuc-don-900x595.jpg','25000vnd',44)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì hải sản','https://blog.traveloka.com/source/uploads/sites/9/2017/07/mon-an-ngon-sai-gon-xien-que-nuong-chien.jpg','25000vnd',44)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì cay','https://cdn.eva.vn/upload/2-2020/images/2020-06-23/nhung-mon-thit-vit-nhin-la-muon-an-ngay-chi-em-co-the-lam-cho-tet-doan-ngo-5-1592884775-106-width640height480.jpg','25000vnd',44)");
+        database.queryData("INSERT INTO Food VALUES (null,'Cơm tấm','https://cdn.eva.vn/upload/2-2020/images/2020-06-23/nhung-mon-thit-vit-nhin-la-muon-an-ngay-chi-em-co-the-lam-cho-tet-doan-ngo-4-1592884775-819-width874height675.jpg','25000vnd',45)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh canh', 'https://hocnauan.edu.vn/wp-content/uploads/2018/10/Hai-san-tot-cho-mau.jpg','25000vnd',46)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún riêu','https://hocnauan.edu.vn/wp-content/uploads/2018/10/Hai-san-tot-cho-mau.jpg','25000vnd',47)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún chả', 'https://hocnauan.edu.vn/wp-content/uploads/2014/05/ga-dong-tao-xao-sa-ot.jpg','25000vnd',47)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bột lọc', 'https://hocnauan.edu.vn/wp-content/uploads/2017/05/cac-mon-ca.jpg','25000vnd',47)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bèo', 'https://hocnauan.edu.vn/wp-content/uploads/2018/05/chao-hat-de.jpg','25000vnd',47)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún mắm','https://hocnauan.edu.vn/wp-content/uploads/2018/05/rau-qua-sach.jpg','25000vnd',47)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún đậu mắm tôm','https://hocnauan.edu.vn/wp-content/uploads/2018/05/ca-hoi.jpg','25000vnd',48)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún bò hế', 'https://hocnauan.edu.vn/wp-content/uploads/2018/05/canh-muop-huong.jpg','25000vnd',48)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì tương đen','https://hocnauan.edu.vn/wp-content/uploads/2018/07/com-gao-luc-mui-me.jpg','25000vnd',48)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì hải sản','c','25000vnd',49)");
+        database.queryData("INSERT INTO Food VALUES (null,'Mì cay','https://hocnauan.edu.vn/wp-content/uploads/2018/11/mon-an-ngua-tieu-duong.jpg','25000vnd',49)");
+        database.queryData("INSERT INTO Food VALUES (null,'Cơm tấm','https://hocnauan.edu.vn/wp-content/uploads/2019/10/chao-to-yen-hat-sen.jpg','25000vnd',49)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh canh', 'https://hocnauan.edu.vn/wp-content/uploads/2018/08/thuc-pham-thuc-duong-theo-mua.jpg','25000vnd',49)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún riêu','https://hocnauan.edu.vn/wp-content/uploads/2018/08/an-thuc-duoc-tu-gao-kut.jpg','25000vnd',50)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bún chả', 'https://hocnauan.edu.vn/wp-content/uploads/2018/08/mon-an-thuc-duong.jpg','25000vnd',50)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bột lọc', 'https://hocnauan.edu.vn/wp-content/uploads/2018/06/ha-cao-mon-ngon-nguoi-hoa.jpg','25000vnd',50)");
+        database.queryData("INSERT INTO Food VALUES (null,'Bánh bèo', 'https://hocnauan.edu.vn/wp-content/uploads/2014/02/gan-bo-xao-ngu-vi.jpg','25000vnd',50)");
 
-        database.queryData("INSERT INTO Restaurant VALUES (null,'Bà năm','Ngon bổ rẻ','0123123123','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2018/07/mon-an-binh-dan.jpg'," +
+        database.queryData("INSERT INTO Restaurant VALUES (null,'Bà năm','Ngon bổ rẻ','0123123123','khongco','khongcho','quán nước','100k','20k','https://travelgear.vn/blog/wp-content/uploads/2019/09/banh-canh-nha-trang.jpg'," +
                 "'TP HCM','1 Võ Văn Ngân Thủ Đức TP HCM')");
-        database.queryData("INSERT INTO Restaurant VALUES (null,'Bà năm','Ngon bổ rẻ','0123123123','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2018/07/mon-an-binh-dan.jpg'," +
+        database.queryData("INSERT INTO Restaurant VALUES (null,'Bà năm','Ngon bổ rẻ','0123123123','khongco','khongcho','quán nước','100k','20k','https://annamtourist.com/media/uf/bai-201/tat-tan-tat-cac-dia-diem-an-uong-ngon-tai-nha-trang-an-nam-tour.jpg'," +
                 "'TP HCM','1 Võ Văn Ngân Thủ Đức TP HCM')");
-        database.queryData("INSERT INTO Restaurant VALUES (null,'Bà năm','Ngon bổ rẻ','0123123123','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2018/07/mon-an-binh-dan.jpg'," +
+        database.queryData("INSERT INTO Restaurant VALUES (null,'Bà năm','Ngon bổ rẻ','0123123123','khongco','khongcho','quán nước','100k','20k','https://daotaobeptruong.vn/wp-content/uploads/2020/04/mon-ngon-moi-ngay.jpg'," +
                 "'TP HCM','1 Võ Văn Ngân Thủ Đức TP HCM')");
-        database.queryData("INSERT INTO Restaurant VALUES (null,'Bà năm','Ngon bổ rẻ','0123123123','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2018/07/mon-an-binh-dan.jpg'," +
+        database.queryData("INSERT INTO Restaurant VALUES (null,'Bà năm','Ngon bổ rẻ','0123123123','khongco','khongcho','quán nước','100k','20k','https://icdn.dantri.com.vn/thumb_w/640/2018/7/16/photo-1-153169977494670128357.jpg'," +
                 "'An Giang','1 Võ Văn Ngân Thủ Đức TP HCM')");
         database.queryData("INSERT INTO Restaurant VALUES (null,'Bà Sáu Sáu','Ngon bổ rẻ','0892727222','khongco','khongcho','quán nước','100k','20k','https://images.foody.vn/res/g1/4452/prof/s640x400/foody-mobile-h2t-jpg-978-635850964187232369.jpg'," +
                 "'An Giang','2 Lê Văn Việt Quận 9 TP HCM')");
@@ -175,9 +294,9 @@ public class MainActivity extends AppCompatActivity {
                 "'Hà Tĩnh','Lô G8. Đường Huỳnh Thúc Kháng')");
         database.queryData("INSERT INTO Restaurant VALUES (null,'hatinh 30','Đảm bảo chất lượng','02746288709','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2014/05/nom-su-hao.jpg'," +
                 "'Hà Tĩnh','Lô G8. Đường Huỳnh Thúc Kháng')");
-        database.queryData("INSERT INTO Restaurant VALUES (null,'haiDUong1','Đảm bảo chất lượng','02746288709','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2014/05/nom-su-hao.jpg'," +
+        database.queryData("INSERT INTO Restaurant VALUES (null,'haiDUong1','Đảm bảo chất lượng','02746288709','khongco','khongcho','quán nước','100k','20k','https://tamnhinrong.org/163005-banh-xeo.jpg'," +
                 "'Hải Dương','Lô G8. Đường Huỳnh Thúc Kháng')");
-        database.queryData("INSERT INTO Restaurant VALUES (null,'HaiDUong','Đảm bảo chất lượng','02746288709','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2014/05/nom-su-hao.jpg'," +
+        database.queryData("INSERT INTO Restaurant VALUES (null,'HaiDUong','Đảm bảo chất lượng','02746288709','khongco','khongcho','quán nước','100k','20k','https://daotaobeptruong.vn/wp-content/uploads/2020/04/mon-ngon-moi-ngay.jpg'," +
                 "'Hải Dương','Lô G8. Đường Huỳnh Thúc Kháng')");
         database.queryData("INSERT INTO Restaurant VALUES (null,'haugaing77','Đảm bảo chất lượng','02746288709','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2014/05/nom-su-hao.jpg'," +
                 "'Hậu Giang','Lô G8. Đường Huỳnh Thúc Kháng')");
@@ -185,13 +304,13 @@ public class MainActivity extends AppCompatActivity {
                 "'Hậu Giang','Lô G8. Đường Huỳnh Thúc Kháng')");
         database.queryData("INSERT INTO Restaurant VALUES (null,'HCm992','Đảm bảo chất lượng','02746288709','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2014/05/nom-su-hao.jpg'," +
                 "'TP HCM','Lô G8. Đường Huỳnh Thúc Kháng')");
-        database.queryData("INSERT INTO Restaurant VALUES (null,'ComBacHaHCm','Đảm bảo chất lượng','02746288709','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2014/05/nom-su-hao.jpg'," +
+        database.queryData("INSERT INTO Restaurant VALUES (null,'ComBacHaHCm','Đảm bảo chất lượng','02746288709','khongco','khongcho','quán nước','100k','20k','https://ngonngon.net/wp-content/uploads/2019/01/20.-B%C3%A1nh-canh-gh%E1%BA%B9-69-%C3%94-Ch%E1%BB%A3-D%E1%BB%ABa-%C4%90%E1%BB%91ng-%C4%90a-30k.jpg'," +
                 "'TP HCM','Lô G8. Đường Huỳnh Thúc Kháng')");
-        database.queryData("INSERT INTO Restaurant VALUES (null,'ComTaHCM20','Đảm bảo chất lượng','02746288709','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2014/05/nom-su-hao.jpg'," +
+        database.queryData("INSERT INTO Restaurant VALUES (null,'ComTaHCM20','Đảm bảo chất lượng','02746288709','khongco','khongcho','quán nước','100k','20k','https://content.baydep.vn/Upload/Images/Content/Hai-phong/monngon/monngonHP11.png'," +
                 "'TP HCM','Lô G8. Đường Huỳnh Thúc Kháng')");
-        database.queryData("INSERT INTO Restaurant VALUES (null,'TinhHCM','Đảm bảo chất lượng','02746288709','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2014/05/nom-su-hao.jpg'," +
+        database.queryData("INSERT INTO Restaurant VALUES (null,'TinhHCM','Đảm bảo chất lượng','02746288709','khongco','khongcho','quán nước','100k','20k','https://ngonngon.net/wp-content/uploads/2019/01/20.-B%C3%A1nh-canh-gh%E1%BA%B9-69-%C3%94-Ch%E1%BB%A3-D%E1%BB%ABa-%C4%90%E1%BB%91ng-%C4%90a-30k.jpg'," +
                 "'TP HCM','Lô G8. Đường Huỳnh Thúc Kháng')");
-        database.queryData("INSERT INTO Restaurant VALUES (null,'ComQuanHCM','Đảm bảo chất lượng','02746288709','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2014/05/nom-su-hao.jpg'," +
+        database.queryData("INSERT INTO Restaurant VALUES (null,'ComQuanHCM','Đảm bảo chất lượng','02746288709','khongco','khongcho','quán nước','100k','20k','https://dulichkhampha24.com/wp-content/uploads/2020/04/quan-an-ngon-quan-10-sai-gon-1.jpg'," +
                 "'TP HCM','Lô G8. Đường Huỳnh Thúc Kháng')");
         database.queryData("INSERT INTO Restaurant VALUES (null,'HaNoi98','Đảm bảo chất lượng','02746288709','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2014/05/nom-su-hao.jpg'," +
                 "'Hà Nội','Lô G8. Đường Huỳnh Thúc Kháng')");
@@ -339,7 +458,7 @@ public class MainActivity extends AppCompatActivity {
                 "'Hưng Yên','Số 2 đường Nguyễn Bỉnh Khiêm, P.Bến Nghé')");
         database.queryData("INSERT INTO Restaurant VALUES (null,'Nhà Hàng TriDuc','Đảm bảo chất lượng','0252625222','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2019/01/Sushi-Sashimi.jpg'," +
                 "'Hòa Bình','Số 2 đường Nguyễn Bỉnh Khiêm, P.Bến Nghé')");
-        database.queryData("INSERT INTO Restaurant VALUES (null,'Nhà Hàng TriDuc','Đảm bảo chất lượng','0252625222','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2019/01/Sushi-Sashimi.jpg'," +
+        database.queryData("INSERT INTO Restaurant VALUES (null,'Nhà Hàng TriDuc','Đảm bảo chất lượng','0252625222','khongco','khongcho','quán nước','100k','20k','https://hocnauan.edu.vn/wp-content/uploads/2018/09/he-thong-quan-an-nha-hang-mon-a.jpg'," +
                 "'Hòa Bình','Số 2 đường Nguyễn Bỉnh Khiêm, P.Bến Nghé')");
 
     }

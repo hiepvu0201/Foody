@@ -29,7 +29,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-          addControl();
+        addControl();
         customExpandableListView=new CustomExpandableListView(MenuActivity.this,listdataHeader,listdataChild);
         expandableListView.setAdapter(customExpandableListView);
     }

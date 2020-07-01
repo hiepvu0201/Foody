@@ -34,6 +34,8 @@ public class RestaurantActivity extends AppCompatActivity {
     ImageButton btnCancel, btnMenu;
     ArrayList<Food> lstFood;
     public static int idQuan;
+    public static String wifi="";
+    public static String wifipass="";
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
@@ -75,14 +77,6 @@ public class RestaurantActivity extends AppCompatActivity {
             }
         });
 
-        tvAddWifi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RestaurantActivity.this, WifiActivity.class);
-                startActivity(intent);
-            }
-        });
-
         tvPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,13 +96,12 @@ public class RestaurantActivity extends AppCompatActivity {
         Intent intent = getIntent();
         tvResName.setText(Objects.requireNonNull(intent.getExtras()).getString("Name"));
         tvPhone.setText(intent.getExtras().getString("phone"));
-//        tvWifi.setText(intent.getExtras().getString("wifi"));
-//        tvPass.setText(intent.getExtras().getString("wifipass"));
         tvType.setText(intent.getExtras().getString("type"));
         tvPrice.setText((intent.getExtras().getString("minprice")) + " - " + (intent.getExtras().getString("maxprice")));
         tvAddress.setText(intent.getExtras().getString("address"));
-//        tvDesc.setText(intent.getExtras().getString("description"));
-//        tvFoodName.setText(intent.getExtras().getString("address"));
+
+        wifi = intent.getExtras().getString("wifi");
+        wifipass = intent.getExtras().getString("wifipass");
 
         idQuan = intent.getIntExtra("id", 0);
         lstFood = new ArrayList<>();
@@ -118,6 +111,16 @@ public class RestaurantActivity extends AppCompatActivity {
         myrv.setLayoutManager(new GridLayoutManager(this,2));
         myrv.setAdapter(myAdapter);
 
+
+        tvAddWifi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(RestaurantActivity.this, WifiActivity.class);
+                i.putExtra("wifi",wifi);
+                i.putExtra("wifipass",wifipass);
+                startActivity(i);
+            }
+        });
     }
 
     private void getFoods(){

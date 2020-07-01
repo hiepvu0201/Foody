@@ -2,20 +2,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".activities.MenuActivity">
 
-    <TextView
-        android:id="@+id/text"
+    <LinearLayout
+        android:id="@+id/lnLayout"
+        android:background="#ed1c24"
         android:layout_width="match_parent"
-        android:text="Bún Đậu Cô Chang"
-        android:textSize="20dp"
-        android:background="#DAD4D4"
-        android:gravity="center"
-        android:textColor="#F44336"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="vertical">
+
+    <TextView
+        android:paddingTop="5dp"
+        android:textColor="#fff"
+        android:paddingLeft="20dp"
+        android:textSize="15sp"
+        android:text="Tìm kiếm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:id="@+id/imgbtnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_back"
+            tools:ignore="VectorDrawableCompat" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Thực đơn hôm nay"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/icMenu"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_3dot"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+    </LinearLayout>
 
     <ExpandableListView
-        android:layout_below="@+id/text"
+        android:layout_below="@+id/lnLayout"
         android:id="@+id/expandableListView"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
